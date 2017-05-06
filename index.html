@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Jetsons RPG</title>
+  <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Carter+One" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+<!-- Game message section -->
+<div class="row" id="message">
+      <div class="col-lg-12" id="message-section">
+        <div id="game-message"></div>
+          <button id="restart">Restart</button>
+      </div>
+    </div>
+<!-- Game message section -->
+<!-- character display -->
+  <div class="row">
+        <div class="col-lg-2" id="chosen-char">
+<!-- chosen character -->
+          <h2>You</h2>
+      </div>
+<!-- chosen character -->
+
+<!-- characters available -->
+    <div class="col-lg-8" id="chars-available">
+      <span class="char-image available-char" id="george-char">
+        <p>George Jetson</p>
+          <img src="./assets/images/george.jpeg" alt="george char" id="george-image" style= "height:100px";>
+        <p class="health">120</p>
+      </span>
+      <span class="char-image available-char" id="jane-char">
+        <p>Jane Jetson</p>
+          <img src="./assets/images/jane.jpg" alt="jane char" id="jane-image" style= "width:100px";>
+        <p class="health">100</p>
+      </span>
+      <span class="char-image available-char" id="judy-char">
+        <p>Judy Jetson</p>
+          <img src="./assets/images/judy.png" alt="judy char" id="judy-image" style= "height:100px";>
+        <p class="health">150</p>
+      </span>
+      <span class="char-image available-char" id="baby-char">
+        <p>Baby Jetson</p>
+          <img src="./assets/images/baby.png" alt="baby char" id="baby-image" style= "height:100px";>
+        <p class="health">180</p>
+      </span>
+<!-- characters to fight -->
+            <div class="col-lg-8" id="enemies-available">
+          <h2>Select a character to fight!</h2>
+        </div>
+<!-- characters to fight -->
+      </div>
+
+<!-- characters available -->
+
+<!-- Defender section -->
+            <div class="col-lg-2" id="defender-section">
+        <h2>Defender</h2>
+      </div>
+<!-- Defender section -->
+
+    </div>
+<!-- Fight section -->
+      <div class="col-lg-12" id="fight-section">
+          <h2>Fight Section</h2>
+            <button id="attack">Attack</button>
+      </div>
+    </div>
+  </div>
+<!-- Fight section -->
+<script type="text/javascript" src="./assets/javascript/game.js"></script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+body {
+	background: url('../images/jetsons.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+	color:#fff;
+	font-family: 'Carter One', cursive;
+}
+
+header h1 {
+	font-size: 4em;
+}
+
+header h2 {
+	font-size: 3em;
+}
+
+h2{
+	margin-top:20px;
+}
+
+b, strong {
+    font-weight: 600;
+    font-size: 2.5em;
+}
+
+.col-lg-8#chars-available{
+	margin-top: 50px;
+}
+
+
+button, input, select, textarea {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #000;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #eee;
+  border:3px solid #fff;
+}
+
+button:hover {background-color: gray}
+
+button:active {
+  background-color: #000;
+  box-shadow: 0 5px #eee;
+  transform: translateY(4px);
+}
+
+#chars-available{
+	color:#000;
+}
+
+
+.col-lg-8 {
+    width: 970px;
+}
+
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    text-align: center;
+}
+
+.char-image {
+	display: inline-block;
+  	height: 145px;
+	padding: 0px 20px 0px 20px;
+	margin: 0px 2px 0px 2px;
+	background-color: #fff;
+	border: 2px solid #000;
+}
+
+.char-image p {
+	text-align: center;
+	margin: 0px 2px 0px 2px;
+}
+
+#chosen-char {
+	height: 300px;
+	margin-top: 50px;
+}
+
+#chosen-char h2 {
+	font-size: 3em;
+	color:#fff;
+}
+
+.chosen-char {
+	border: 3px solid #000;
+	background-color: green;
+	color:#000;
+}
+
+#enemies-available h2 {
+	font-size: 3em;
+	color:#fff;
+}
+
+.enemy-char {
+	border: 3px solid #000;
+	background-color: red;
+	margin: 0px 2px 0px 2px;
+}
+
+#fight-section h2 {
+	font-size: 2em;
+	color:#fff;
+}
+
+#defender-section {
+	margin-top: 50px;
+
+}
+
+#defender-section h2 {
+	font-size: 3em;
+	color:#fff;
+}
+
+.defender-char {
+	border: 3px solid #000;
+	background-color: blue;
+	color: #fff;
+}
+
+#game-message {
+	font-size: 2em;
+	color:#fff;
+}
+
+div#game-message{
+	padding:140px;
+}
