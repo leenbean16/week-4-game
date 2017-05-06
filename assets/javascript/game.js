@@ -1,5 +1,6 @@
-var charSelected = false;
-var defenderSelected = false;
+// jetsons game
+var charChosen = false;
+var defenderChosen = false;
 var char = {};
 var defender = {};
 var enemiesDefeated = 0;
@@ -61,8 +62,8 @@ function resetGame() {
   $("#game-message").empty();
   $("#restart").hide();
 
-  charSelected = false;
-  defenderSelected = false;
+  charChosen = false;
+  defenderChosen = false;
   enemiesDefeated = 0;
   gameOver = false;
   char = {};
@@ -74,25 +75,24 @@ $(document).ready(function() {
   $("#restart").hide();
 // determine char
   $("#jane-char").on("click", function () {
-    console.log("jane is selected");
 // user pics char
-    if(charSelected == false) {
+    if(charChosen == false) {
       $("#game-message").empty();
 // users char
       getchar(jane);
-      charSelected = true;
+      charChosen = true;
 // display
       $("#jane-char").removeClass("available-char").addClass("chosen-char");
       $("#chosen-char").append(this);
 // move to enemies section
       moveToEnemies();
-    } else if ((charSelected == true) && (defenderSelected == false)) {
+    } else if ((charChosen == true) && (defenderChosen == false)) {
 // choose defender
       if($("#jane-char").hasClass("enemy-char")) {
         $("#game-message").empty();
 // set enemy
         getDefender(jane);
-        defenderSelected = true;
+        defenderChosen = true;
 // add to defender section
         $("#jane-char").removeClass("enemy-char").addClass("defender-char");
         $("#defender-section").append(this);
@@ -101,25 +101,24 @@ $(document).ready(function() {
   });
 
   $("#george-char").on("click", function () {
-    console.log("george is selected");
 // choose char
-    if(charSelected == false) {
+    if(charChosen == false) {
       $("#game-message").empty();
 // set char
       getchar(george);
-      charSelected = true;
+      charChosen = true;
 // display char
       $("#george-char").removeClass("available-char").addClass("chosen-char");
       $("#chosen-char").append(this);
 // move to enemies section
       moveToEnemies();
-    } else if ((charSelected == true) && (defenderSelected == false)) {
+    } else if ((charChosen == true) && (defenderChosen == false)) {
 // choose defender
       if($("#george-char").hasClass("enemy-char")) {
         $("#game-message").empty();
 // set enemy
         getDefender(george);
-        defenderSelected = true;
+        defenderChosen = true;
 // add to defender section
         $("#george-char").removeClass("enemy-char").addClass("defender-char");
         $("#defender-section").append(this);
@@ -128,25 +127,24 @@ $(document).ready(function() {
   });
 
   $("#judy-char").on("click", function () {
-    console.log("judy is selected");
 // choose char
-    if(charSelected == false) {
+    if(charChosen == false) {
       $("#game-message").empty();
 // set char
       getchar(judy);
-      charSelected = true;
+      charChosen = true;
 // display char
       $("#judy-char").removeClass("available-char").addClass("chosen-char");
       $("#chosen-char").append(this);
 // move to enemies
       moveToEnemies();
-    } else if ((charSelected == true) && (defenderSelected == false)) {
+    } else if ((charChosen == true) && (defenderChosen == false)) {
 // choose defender
       if($("#judy-char").hasClass("enemy-char")) {
         $("#game-message").empty();
 // set enemy
         getDefender(judy);
-        defenderSelected = true;
+        defenderChosen = true;
 // add to defender section
         $("#judy-char").removeClass("enemy-char").addClass("defender-char");
         $("#defender-section").append(this);
@@ -155,25 +153,24 @@ $(document).ready(function() {
   });
 
   $("#baby-char").on("click", function () {
-    console.log("baby is selected");
 // choose char
-    if(charSelected == false) {
+    if(charChosen == false) {
       $("#game-message").empty();
 // set char
       getchar(baby);
-      charSelected = true;
+      charChosen = true;
 // display char
       $("#baby-char").removeClass("available-char").addClass("chosen-char");
       $("#chosen-char").append(this);
 // move to enemies
       moveToEnemies();
-    } else if ((charSelected == true) && (defenderSelected == false)) {
+    } else if ((charChosen == true) && (defenderChosen == false)) {
 // choose defender
       if($("#baby-char").hasClass("enemy-char")) {
         $("#game-message").empty();
 // set enemy
         getDefender(baby);
-        defenderSelected = true;
+        defenderChosen = true;
 // add to defender section
         $("#baby-char").removeClass("enemy-char").addClass("defender-char");
         $("#defender-section").append(this);
@@ -182,9 +179,8 @@ $(document).ready(function() {
   });
 
   $("#attack").on("click", function() {
-    console.log("Attack selected");
 // attack defender
-    if (charSelected && defenderSelected && !gameOver) {
+    if (charChosen && defenderChosen && !gameOver) {
 // decreare points
       defender.health = defender.health - char.attack;
       $(".defender-char").children(".health").html(defender.health);
@@ -206,7 +202,7 @@ $(document).ready(function() {
       } else {
 // lost game.
         enemiesDefeated++;
-        defenderSelected = false;
+        defenderChosen = false;
         $("#game-message").html("<p>You beat " + defender.name + ". Pick another enemy.</p>");
         $(".defender-char").hide();
 // won game?
@@ -216,9 +212,9 @@ $(document).ready(function() {
           $("#restart").show();
         }
       }
-    } else if (!charSelected && !gameOver) {
+    } else if (!charChosen && !gameOver) {
       $("#game-message").html("<p>Select your character.</p>");
-    } else if (!defenderSelected && !gameOver) {
+    } else if (!defenderChosen && !gameOver) {
       $("#game-message").html("<p>Pick an enemy.</p>");
     }
 
